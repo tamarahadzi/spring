@@ -1,5 +1,8 @@
 package com.example.spring.model;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -35,6 +38,8 @@ public class Car {
     private String size;
 
     @Column(name = "date_created")
+    @Generated(GenerationTime.INSERT
+    )
     private Timestamp dateCreated;
 
     public Long getId() {
