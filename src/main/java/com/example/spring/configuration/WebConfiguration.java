@@ -117,19 +117,19 @@ public class WebConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http
-                .csrf()
-                .disable()
-                .antMatcher("/**")
-                .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class)
-                .authorizeRequests()
-                .antMatchers("/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/")
-                .loginProcessingUrl("/customLogin").permitAll();
+            .csrf()
+            .disable()
+            .antMatcher("/**")
+            .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class)
+            .authorizeRequests()
+            .antMatchers("/**")
+            .permitAll()
+            .anyRequest()
+            .authenticated()
+            .and()
+            .formLogin()
+            .loginPage("/")
+            .loginProcessingUrl("/customLogin").permitAll();
     }
 
 }

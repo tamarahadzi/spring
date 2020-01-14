@@ -9,18 +9,25 @@
     <script src="https://kit.fontawesome.com/0bad113881.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" media="all" href="/css/login.css">
+    <script src="/js/login.js"></script>
 </head>
 <body>
 <div class="shadow-lg border border-secondary login-div">
     <h3 class="login-title">Log In</h3>
     <input type="text" class="form-control login-width-margin" name="email" placeholder="Email address"/>
     <input type="password" class="form-control login-width-margin" name="password" placeholder="Password"/>
-    <button type="button" class="btn btn-primary login-width-margin">Log In</button>
+    <button type="button" class="btn btn-primary login-button">Log In</button>
     <hr/>
     <div class="login-google-facebook-div">
-        <button type="button" class="btn btn-secondary login-google-facebook"><i class="fab fa-google-plus"></i> Via Google</button>
-        <button type="button" class="btn btn-secondary login-google-facebook"><i class="fab fa-facebook"></i> Via Facebook</button>
+        <button type="button" id="googleLogin" class="btn btn-secondary login-google-facebook"><i class="fab fa-google-plus"></i> Via Google</button>
+        <button type="button" id="facebookLogin" class="btn btn-secondary login-google-facebook"><i class="fab fa-facebook"></i> Via Facebook</button>
     </div>
 </div>
+
+<script>
+    var login = new Login();
+    login.init();
+</script>
+
 </body>
 </html>

@@ -65,4 +65,10 @@ public class CarRestController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/testapi")
+    public void testapi(@RequestParam("aaa") String a) {
+        String b = a;
+        String c = b + "aaaaaaa";
+    }
 }

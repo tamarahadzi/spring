@@ -16,6 +16,12 @@
     display: block;
 }
 
+.login-button {
+    width: 45%;
+    margin: 15px auto;
+    display: block;
+}
+
 .login-google-facebook {
     width: 45%;
     margin: auto;
